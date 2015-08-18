@@ -59,9 +59,9 @@
 					
 					<li>
  					
-						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
+						<form class="search">
 							<label>Search</label>
-						<input name="s" type="hidden" value= 7174999833844689000 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						<input name="s" type="hidden" value= 7174999833844689000 ><input id="bdcsMain" type="text" name="q" size="30" placeholder="搜索"><br>
 						</form>
 					
 					</li>
@@ -72,6 +72,143 @@
     </header>
     <div id="container">
       <div id="main">
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/18/kugou/" title="前端性能优化总结" itemprop="url">前端性能优化总结</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="YanLi" target="_blank" itemprop="author">YanLi</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-18T14:16:33.000Z" itemprop="datePublished"> 發表於 2015-08-18</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="为甚要进行前端性能优化">为甚要进行前端性能优化</h1><blockquote>
+<p>用户体验</p>
+</blockquote>
+<p><img src="http://7xl4v7.com1.z0.glb.clouddn.com/IMG_0208.jpg" alt=""></p>
+<h2 id="如何进行前端的性能优化">如何进行前端的性能优化</h2><ul>
+<li>服务端</li>
+<li>网络</li>
+<li>客户端（主要原因）</li>
+<li>服务端</li>
+<li>接口按需请求</li>
+<li>接口走cdn</li>
+<li>静态资源缓存（移动端走离线存储）（缓存更新问题,版本号md5戳）</li>
+<li>静态资源走cdn</li>
+<li>网络（省着点用）</li>
+<li>背景图合并</li>
+<li>js／css文件选择性合并，压缩</li>
+<li>图片按需加载</li>
+<li>图片控制</li>
+<li>gzip开启</li>
+<li>合理使用静态资源域名<h2 id="客户端">客户端</h2></li>
+<li>加载</li>
+<li><p>js文件尾部引入，异步加载</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">加快<span class="tag">JavaScript</span>装入速度的工具：<span class="tag">Lab</span><span class="class">.js</span></span><br><span class="line">借助<span class="tag">LAB</span><span class="class">.js</span>（装入和阻止<span class="tag">JavaScript</span>），你就可以并行装入<span class="tag">JavaScript</span>文件，加快总的装入过程。</span><br><span class="line">此外，你还可以为需要装入的脚本设置某个顺序，那样就能确保依赖关系的完整性。此外，开发者声称其网站上的速度提升了2倍。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>非核心模块异步</p>
+</li>
+<li>合理分配域名<h2 id="聊天">聊天</h2></li>
+<li>DOM节点数进行限制<h2 id="视频">视频</h2></li>
+<li>视频加载提前至合理位置</li>
+<li>主动延后一部分模块加载，给视频让路</li>
+<li>直接使用object，而非js输出<h2 id="动画">动画</h2></li>
+<li>降低礼物资源本身对资源的消耗水平</li>
+<li>适当使用canvas实现礼物，代替flash</li>
+<li>合理控制礼物展示与消失<h2 id="网页内容">网页内容</h2></li>
+<li>减少http请求次数</li>
+<li>减少dns查询次数</li>
+<li>减少页面跳转</li>
+<li>缓存ajax</li>
+<li>延迟加载</li>
+<li>提前加载</li>
+<li>减少dom元素数量</li>
+<li>根据域名划分内容</li>
+<li>减少iframe数量</li>
+<li>避免404<h2 id="服务器">服务器</h2></li>
+<li>使用cdn</li>
+<li>添加expires或者cache-control报文tou</li>
+<li>gzip压缩文件</li>
+<li>尽早flush输出</li>
+<li>使用get ajax请求</li>
+<li>避免空的图片的src</li>
+<li>cookies</li>
+<li>减少cookie大小</li>
+<li>页面内容使用无cookie域名<h2 id="css">css</h2></li>
+<li>将样式表置顶</li>
+<li>避免css表达式</li>
+<li>用link替代@import</li>
+<li>避免使用filters<h2 id="javascript">javascript</h2></li>
+<li>将脚本置底</li>
+<li>使用外部javascript和css</li>
+<li>去除重复脚本</li>
+<li>减少dom访问</li>
+<li>使用智能时间处理<h2 id="图片">图片</h2></li>
+<li>优化图片</li>
+<li>优化sprite</li>
+<li>不要在html中缩放图片</li>
+<li>使用小且可缓存的favicon.ico</li>
+<li>移动客户端</li>
+<li>保持单个内容小于25kb</li>
+<li>打包组建成符合文档<h2 id="如何证明优化成果">如何证明优化成果</h2></li>
+<li><p>工具采集</p>
+<blockquote>
+<p>百度性能检测中心<br>阿里测</p>
+</blockquote>
+</li>
+<li><p>命令采集</p>
+<blockquote>
+<p>phantom.js</p>
+</blockquote>
+</li>
+<li><p>脚本采集</p>
+<blockquote>
+<p>自己写脚本注入页面进行统计</p>
+</blockquote>
+</li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/08/18/kugou/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/18/kugou/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
 
    
     
@@ -212,6 +349,12 @@
 </div>
 
 
+  <div class="weiboshow">
+  <p class="asidetitle">网易云音乐</p>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width='100%' height=110 src="http://music.163.com/outchain/player?type=0&id=85113844&auto=0&height=90"></iframe>
+</div>
+
+
   
 
   
@@ -279,7 +422,8 @@
 		
 		</p>
 </div>
-<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=7174999833844689396' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script></footer>
+<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=7174999833844689396' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+</footer>
     <script src="/js/jquery-2.0.3.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>

@@ -4,23 +4,90 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>新开始 | Mrli&#39;s blog</title>
+    <title>前端性能优化总结 | Mrli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="YanLi">
     
 
     
-    <meta name="description" content="这是我用hexo在GitHub上面搭建的个人微博，以后会分享一些技术经验与心得。123456#include &amp;lt;stdio.h&amp;gt;int main ()&amp;#123;	print(&apos;hello,world&apos;);	return 0;&amp;#125;//一切伟大的行动和思想都有一个微不足道的开始">
+    <meta name="description" content="为甚要进行前端性能优化
+用户体验
+
+
+如何进行前端的性能优化
+服务端
+网络
+客户端（主要原因）
+服务端
+接口按需请求
+接口走cdn
+静态资源缓存（移动端走离线存储）（缓存更新问题,版本号md5戳）
+静态资源走cdn
+网络（省着点用）
+背景图合并
+js／css文件选择性合并，压缩
+图片按需加载
+图片控制
+gzip开启
+合理使用静态资源域名客户端
+加载
+js文件尾部引入，异步加载
+123加快JavaS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新开始">
-<meta property="og:url" content="http://yoursite.com/2015/08/06/My-Gallery/index.html">
+<meta property="og:title" content="前端性能优化总结">
+<meta property="og:url" content="http://yoursite.com/2015/08/18/kugou/index.html">
 <meta property="og:site_name" content="Mrli's blog">
-<meta property="og:description" content="这是我用hexo在GitHub上面搭建的个人微博，以后会分享一些技术经验与心得。123456#include &amp;lt;stdio.h&amp;gt;int main ()&amp;#123;	print(&apos;hello,world&apos;);	return 0;&amp;#125;//一切伟大的行动和思想都有一个微不足道的开始">
-<meta property="og:updated_time" content="2015-08-07T00:57:30.000Z">
+<meta property="og:description" content="为甚要进行前端性能优化
+用户体验
+
+
+如何进行前端的性能优化
+服务端
+网络
+客户端（主要原因）
+服务端
+接口按需请求
+接口走cdn
+静态资源缓存（移动端走离线存储）（缓存更新问题,版本号md5戳）
+静态资源走cdn
+网络（省着点用）
+背景图合并
+js／css文件选择性合并，压缩
+图片按需加载
+图片控制
+gzip开启
+合理使用静态资源域名客户端
+加载
+js文件尾部引入，异步加载
+123加快JavaS">
+<meta property="og:image" content="http://7xl4v7.com1.z0.glb.clouddn.com/IMG_0208.jpg">
+<meta property="og:updated_time" content="2015-08-18T14:31:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新开始">
-<meta name="twitter:description" content="这是我用hexo在GitHub上面搭建的个人微博，以后会分享一些技术经验与心得。123456#include &amp;lt;stdio.h&amp;gt;int main ()&amp;#123;	print(&apos;hello,world&apos;);	return 0;&amp;#125;//一切伟大的行动和思想都有一个微不足道的开始">
+<meta name="twitter:title" content="前端性能优化总结">
+<meta name="twitter:description" content="为甚要进行前端性能优化
+用户体验
+
+
+如何进行前端的性能优化
+服务端
+网络
+客户端（主要原因）
+服务端
+接口按需请求
+接口走cdn
+静态资源缓存（移动端走离线存储）（缓存更新问题,版本号md5戳）
+静态资源走cdn
+网络（省着点用）
+背景图合并
+js／css文件选择性合并，压缩
+图片按需加载
+图片控制
+gzip开启
+合理使用静态资源域名客户端
+加载
+js文件尾部引入，异步加载
+123加快JavaS">
 
     
     <link rel="alternative" href="/atom.xml" title="Mrli&#39;s blog" type="application/atom+xml">
@@ -72,20 +139,20 @@
 
     </header>
     <div id="container">
-      <div id="main" class="photo" itemscope itemprop="blogPost">
+      <div id="main" class="post" itemscope itemprop="blogPost">
   
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/06/My-Gallery/" title="新开始" itemprop="url">新开始</a>
+      <a href="/2015/08/18/kugou/" title="前端性能优化总结" itemprop="url">前端性能优化总结</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="YanLi" target="_blank" itemprop="author">YanLi</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-06T08:35:51.000Z" itemprop="datePublished"> 發表於 2015-08-06</time>
+    <time datetime="2015-08-18T14:16:33.000Z" itemprop="datePublished"> 發表於 2015-08-18</time>
     
   </p>
 </header>
@@ -94,11 +161,95 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#为甚要进行前端性能优化"><span class="toc-number">1.</span> <span class="toc-text">为甚要进行前端性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何进行前端的性能优化"><span class="toc-number">1.1.</span> <span class="toc-text">如何进行前端的性能优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#客户端"><span class="toc-number">1.2.</span> <span class="toc-text">客户端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#聊天"><span class="toc-number">1.3.</span> <span class="toc-text">聊天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视频"><span class="toc-number">1.4.</span> <span class="toc-text">视频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画"><span class="toc-number">1.5.</span> <span class="toc-text">动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页内容"><span class="toc-number">1.6.</span> <span class="toc-text">网页内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器"><span class="toc-number">1.7.</span> <span class="toc-text">服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css"><span class="toc-number">1.8.</span> <span class="toc-text">css</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#javascript"><span class="toc-number">1.9.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片"><span class="toc-number">1.10.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何证明优化成果"><span class="toc-number">1.11.</span> <span class="toc-text">如何证明优化成果</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p><strong>这是我用<a href="https://hexo.io/" target="_blank" rel="external">hexo</a>在<a href="https://github.com/" target="_blank" rel="external">GitHub</a>上面搭建的个人微博，以后会分享一些技术经验与心得。</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main ()&#123;</span><br><span class="line">	print('hello,world');</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">//一切伟大的行动和思想都有一个微不足道的开始</span><br></pre></td></tr></table></figure></p>
+		<h1 id="为甚要进行前端性能优化">为甚要进行前端性能优化</h1><blockquote>
+<p>用户体验</p>
+</blockquote>
+<p><img src="http://7xl4v7.com1.z0.glb.clouddn.com/IMG_0208.jpg" alt=""></p>
+<h2 id="如何进行前端的性能优化">如何进行前端的性能优化</h2><ul>
+<li>服务端</li>
+<li>网络</li>
+<li>客户端（主要原因）</li>
+<li>服务端</li>
+<li>接口按需请求</li>
+<li>接口走cdn</li>
+<li>静态资源缓存（移动端走离线存储）（缓存更新问题,版本号md5戳）</li>
+<li>静态资源走cdn</li>
+<li>网络（省着点用）</li>
+<li>背景图合并</li>
+<li>js／css文件选择性合并，压缩</li>
+<li>图片按需加载</li>
+<li>图片控制</li>
+<li>gzip开启</li>
+<li>合理使用静态资源域名<h2 id="客户端">客户端</h2></li>
+<li>加载</li>
+<li><p>js文件尾部引入，异步加载</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">加快<span class="tag">JavaScript</span>装入速度的工具：<span class="tag">Lab</span><span class="class">.js</span></span><br><span class="line">借助<span class="tag">LAB</span><span class="class">.js</span>（装入和阻止<span class="tag">JavaScript</span>），你就可以并行装入<span class="tag">JavaScript</span>文件，加快总的装入过程。</span><br><span class="line">此外，你还可以为需要装入的脚本设置某个顺序，那样就能确保依赖关系的完整性。此外，开发者声称其网站上的速度提升了2倍。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>非核心模块异步</p>
+</li>
+<li>合理分配域名<h2 id="聊天">聊天</h2></li>
+<li>DOM节点数进行限制<h2 id="视频">视频</h2></li>
+<li>视频加载提前至合理位置</li>
+<li>主动延后一部分模块加载，给视频让路</li>
+<li>直接使用object，而非js输出<h2 id="动画">动画</h2></li>
+<li>降低礼物资源本身对资源的消耗水平</li>
+<li>适当使用canvas实现礼物，代替flash</li>
+<li>合理控制礼物展示与消失<h2 id="网页内容">网页内容</h2></li>
+<li>减少http请求次数</li>
+<li>减少dns查询次数</li>
+<li>减少页面跳转</li>
+<li>缓存ajax</li>
+<li>延迟加载</li>
+<li>提前加载</li>
+<li>减少dom元素数量</li>
+<li>根据域名划分内容</li>
+<li>减少iframe数量</li>
+<li>避免404<h2 id="服务器">服务器</h2></li>
+<li>使用cdn</li>
+<li>添加expires或者cache-control报文tou</li>
+<li>gzip压缩文件</li>
+<li>尽早flush输出</li>
+<li>使用get ajax请求</li>
+<li>避免空的图片的src</li>
+<li>cookies</li>
+<li>减少cookie大小</li>
+<li>页面内容使用无cookie域名<h2 id="css">css</h2></li>
+<li>将样式表置顶</li>
+<li>避免css表达式</li>
+<li>用link替代@import</li>
+<li>避免使用filters<h2 id="javascript">javascript</h2></li>
+<li>将脚本置底</li>
+<li>使用外部javascript和css</li>
+<li>去除重复脚本</li>
+<li>减少dom访问</li>
+<li>使用智能时间处理<h2 id="图片">图片</h2></li>
+<li>优化图片</li>
+<li>优化sprite</li>
+<li>不要在html中缩放图片</li>
+<li>使用小且可缓存的favicon.ico</li>
+<li>移动客户端</li>
+<li>保持单个内容小于25kb</li>
+<li>打包组建成符合文档<h2 id="如何证明优化成果">如何证明优化成果</h2></li>
+<li><p>工具采集</p>
+<blockquote>
+<p>百度性能检测中心<br>阿里测</p>
+</blockquote>
+</li>
+<li><p>命令采集</p>
+<blockquote>
+<p>phantom.js</p>
+</blockquote>
+</li>
+<li><p>脚本采集</p>
+<blockquote>
+<p>自己写脚本注入页面进行统计</p>
+</blockquote>
+</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -111,7 +262,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/08/06/My-Gallery/" data-title="新开始 | Mrli&#39;s blog" data-tsina="2641199792" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/08/18/kugou/" data-title="前端性能优化总结 | Mrli&#39;s blog" data-tsina="2641199792" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -124,20 +275,20 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/08/07/常用二维码生成格式/" title="常用二维码生成格式">
-  <strong>上一篇：</strong><br/>
-  <span>
-  常用二维码生成格式</span>
+
+<div class="next">
+<a href="/2015/08/07/常用二维码生成格式/"  title="常用二维码生成格式">
+ <strong>下一篇：</strong><br/> 
+ <span>常用二维码生成格式
+</span>
 </a>
 </div>
-
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/08/06/My-Gallery/" data-title="新开始" data-url="http://yoursite.com/2015/08/06/My-Gallery/"></div>
+	<div class="ds-thread" data-thread-key="2015/08/18/kugou/" data-title="前端性能优化总结" data-url="http://yoursite.com/2015/08/18/kugou/"></div>
 </section>
 
 
@@ -147,7 +298,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#为甚要进行前端性能优化"><span class="toc-number">1.</span> <span class="toc-text">为甚要进行前端性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何进行前端的性能优化"><span class="toc-number">1.1.</span> <span class="toc-text">如何进行前端的性能优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#客户端"><span class="toc-number">1.2.</span> <span class="toc-text">客户端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#聊天"><span class="toc-number">1.3.</span> <span class="toc-text">聊天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视频"><span class="toc-number">1.4.</span> <span class="toc-text">视频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画"><span class="toc-number">1.5.</span> <span class="toc-text">动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页内容"><span class="toc-number">1.6.</span> <span class="toc-text">网页内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器"><span class="toc-number">1.7.</span> <span class="toc-text">服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css"><span class="toc-number">1.8.</span> <span class="toc-text">css</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#javascript"><span class="toc-number">1.9.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片"><span class="toc-number">1.10.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何证明优化成果"><span class="toc-number">1.11.</span> <span class="toc-text">如何证明优化成果</span></a></li></ol></li></ol>
  
   </div>
 

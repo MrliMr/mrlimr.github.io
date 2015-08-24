@@ -4,22 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Mrli&#39;s blog</title>
+    <title>javascript 学习笔记1 | Mrli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="YanLi">
     
 
     
-    <meta name="description" content="这是我用来学习、分享的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mrli's blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+    <meta name="description" content="修改属性和方法12345678var hero = &amp;#123;&amp;#125;;//创建一个空对象hero.breed = &apos;turtle&apos;;//添加一些属性和方法hero.name = &apos;Mrli&apos;;hero.sayName = function()&amp;#123;	return hero.name;&amp;#125;hero.sayName();//调用该方法delete hero.name;//删除一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript 学习笔记1">
+<meta property="og:url" content="http://yoursite.com/2015/08/24/javascript-学习笔记1/index.html">
 <meta property="og:site_name" content="Mrli's blog">
-<meta property="og:description" content="这是我用来学习、分享的博客">
+<meta property="og:description" content="修改属性和方法12345678var hero = &amp;#123;&amp;#125;;//创建一个空对象hero.breed = &apos;turtle&apos;;//添加一些属性和方法hero.name = &apos;Mrli&apos;;hero.sayName = function()&amp;#123;	return hero.name;&amp;#125;hero.sayName();//调用该方法delete hero.name;//删除一个">
+<meta property="og:updated_time" content="2015-08-24T15:53:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mrli's blog">
-<meta name="twitter:description" content="这是我用来学习、分享的博客">
+<meta name="twitter:title" content="javascript 学习笔记1">
+<meta name="twitter:description" content="修改属性和方法12345678var hero = &amp;#123;&amp;#125;;//创建一个空对象hero.breed = &apos;turtle&apos;;//添加一些属性和方法hero.name = &apos;Mrli&apos;;hero.sayName = function()&amp;#123;	return hero.name;&amp;#125;hero.sayName();//调用该方法delete hero.name;//删除一个">
 
     
     <link rel="alternative" href="/atom.xml" title="Mrli&#39;s blog" type="application/atom+xml">
@@ -71,12 +72,10 @@
 
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2015/08/24/javascript-学习笔记1/" title="javascript 学习笔记1" itemprop="url">javascript 学习笔记1</a>
@@ -90,9 +89,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h2 id="修改属性和方法">修改属性和方法</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hero = &#123;&#125;;<span class="comment">//创建一个空对象</span></span><br><span class="line">hero.breed = <span class="string">'turtle'</span>;<span class="comment">//添加一些属性和方法</span></span><br><span class="line">hero.name = <span class="string">'Mrli'</span>;</span><br><span class="line">hero.sayName = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> hero.name;</span><br><span class="line">&#125;</span><br><span class="line">hero.sayName();<span class="comment">//调用该方法</span></span><br><span class="line"><span class="keyword">delete</span> hero.name;<span class="comment">//删除一个属性</span></span><br></pre></td></tr></table></figure>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改属性和方法"><span class="toc-number">1.</span> <span class="toc-text">修改属性和方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用this值"><span class="toc-number">2.</span> <span class="toc-text">使用this值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构造函数"><span class="toc-number">3.</span> <span class="toc-text">构造函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#instanceof操作符"><span class="toc-number">4.</span> <span class="toc-text">instanceof操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传递对象"><span class="toc-number">5.</span> <span class="toc-text">传递对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象比较"><span class="toc-number">6.</span> <span class="toc-text">对象比较</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="修改属性和方法">修改属性和方法</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hero = &#123;&#125;;<span class="comment">//创建一个空对象</span></span><br><span class="line">hero.breed = <span class="string">'turtle'</span>;<span class="comment">//添加一些属性和方法</span></span><br><span class="line">hero.name = <span class="string">'Mrli'</span>;</span><br><span class="line">hero.sayName = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> hero.name;</span><br><span class="line">&#125;</span><br><span class="line">hero.sayName();<span class="comment">//调用该方法</span></span><br><span class="line"><span class="keyword">delete</span> hero.name;<span class="comment">//删除一个属性</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="使用this值">使用this值</h2><pre><code>当我们处于某个对象方法内部时，还可以用另一种方法来访问同一对象属性，即该对象的特殊值<span class="keyword">this</span>。
 </code></pre><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hero = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">	name:<span class="string">'Mrli'</span>,</span><br><span class="line">	sayName:<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">hero.sayName();</span><br></pre></td></tr></table></figure>
@@ -118,14 +124,9 @@
 </code></pre><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">mydog=<span class="value">==benji;//<span class="keyword">true</span></span></span></span><br></pre></td></tr></table></figure>
 <pre><code>并且，由于fido是一个不同的对象，所以不能与mydog进行比较。
 </code></pre><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">mydog=<span class="value">==fido;//<span class="keyword">false</span></span></span></span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -138,289 +139,47 @@
 
 
 
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2015/08/24/javascript-学习笔记1/" data-title="javascript 学习笔记1 | Mrli&#39;s blog" data-tsina="2641199792" class="share clearfix">
+	  </div>
+	
+	</div>
 
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/08/24/javascript-学习笔记1/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/24/javascript-学习笔记1/" data-count-type="comments">&nbsp;</a>
-	
-</div>
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/08/18/kugou/" title="前端性能优化总结" itemprop="url">前端性能优化总结</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YanLi" target="_blank" itemprop="author">YanLi</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-18T14:16:33.000Z" itemprop="datePublished"> 發表於 2015-08-18</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="为甚要进行前端性能优化">为甚要进行前端性能优化</h1><blockquote>
-<p>用户体验</p>
-</blockquote>
-<p><img src="http://7xl4v7.com1.z0.glb.clouddn.com/IMG_0208.jpg" alt=""></p>
-<h2 id="如何进行前端的性能优化">如何进行前端的性能优化</h2><ul>
-<li>服务端</li>
-<li>网络</li>
-<li>客户端（主要原因）</li>
-<li>服务端</li>
-<li>接口按需请求</li>
-<li>接口走cdn</li>
-<li>静态资源缓存（移动端走离线存储）（缓存更新问题,版本号md5戳）</li>
-<li>静态资源走cdn</li>
-<li>网络（省着点用）</li>
-<li>背景图合并</li>
-<li>js／css文件选择性合并，压缩</li>
-<li>图片按需加载</li>
-<li>图片控制</li>
-<li>gzip开启</li>
-<li>合理使用静态资源域名<h2 id="客户端">客户端</h2></li>
-<li>加载</li>
-<li><p>js文件尾部引入，异步加载</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">加快<span class="tag">JavaScript</span>装入速度的工具：<span class="tag">Lab</span><span class="class">.js</span></span><br><span class="line">借助<span class="tag">LAB</span><span class="class">.js</span>（装入和阻止<span class="tag">JavaScript</span>），你就可以并行装入<span class="tag">JavaScript</span>文件，加快总的装入过程。</span><br><span class="line">此外，你还可以为需要装入的脚本设置某个顺序，那样就能确保依赖关系的完整性。此外，开发者声称其网站上的速度提升了2倍。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>非核心模块异步</p>
-</li>
-<li>合理分配域名<h2 id="聊天">聊天</h2></li>
-<li>DOM节点数进行限制<h2 id="视频">视频</h2></li>
-<li>视频加载提前至合理位置</li>
-<li>主动延后一部分模块加载，给视频让路</li>
-<li>直接使用object，而非js输出<h2 id="动画">动画</h2></li>
-<li>降低礼物资源本身对资源的消耗水平</li>
-<li>适当使用canvas实现礼物，代替flash</li>
-<li>合理控制礼物展示与消失<h2 id="网页内容">网页内容</h2></li>
-<li>减少http请求次数</li>
-<li>减少dns查询次数</li>
-<li>减少页面跳转</li>
-<li>缓存ajax</li>
-<li>延迟加载</li>
-<li>提前加载</li>
-<li>减少dom元素数量</li>
-<li>根据域名划分内容</li>
-<li>减少iframe数量</li>
-<li>避免404<h2 id="服务器">服务器</h2></li>
-<li>使用cdn</li>
-<li>添加expires或者cache-control报文tou</li>
-<li>gzip压缩文件</li>
-<li>尽早flush输出</li>
-<li>使用get ajax请求</li>
-<li>避免空的图片的src</li>
-<li>cookies</li>
-<li>减少cookie大小</li>
-<li>页面内容使用无cookie域名<h2 id="css">css</h2></li>
-<li>将样式表置顶</li>
-<li>避免css表达式</li>
-<li>用link替代@import</li>
-<li>避免使用filters<h2 id="javascript">javascript</h2></li>
-<li>将脚本置底</li>
-<li>使用外部javascript和css</li>
-<li>去除重复脚本</li>
-<li>减少dom访问</li>
-<li>使用智能时间处理<h2 id="图片">图片</h2></li>
-<li>优化图片</li>
-<li>优化sprite</li>
-<li>不要在html中缩放图片</li>
-<li>使用小且可缓存的favicon.ico</li>
-<li>移动客户端</li>
-<li>保持单个内容小于25kb</li>
-<li>打包组建成符合文档<h2 id="如何证明优化成果">如何证明优化成果</h2></li>
-<li><p>工具采集</p>
-<blockquote>
-<p>百度性能检测中心<br>阿里测</p>
-</blockquote>
-</li>
-<li><p>命令采集</p>
-<blockquote>
-<p>phantom.js</p>
-</blockquote>
-</li>
-<li><p>脚本采集</p>
-<blockquote>
-<p>自己写脚本注入页面进行统计</p>
-</blockquote>
-</li>
-</ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
-	  	<span></span>
-		<a href="/2015/08/18/kugou/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/18/kugou/" data-count-type="comments">&nbsp;</a>
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/08/18/kugou/"  title="前端性能优化总结">
+ <strong>下一篇：</strong><br/> 
+ <span>前端性能优化总结
+</span>
+</a>
+</div>
+
+</nav>
+
 	
-</div>
-
-</footer>
-
-
-    </article>
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/08/24/javascript-学习笔记1/" data-title="javascript 学习笔记1" data-url="http://yoursite.com/2015/08/24/javascript-学习笔记1/"></div>
+</section>
 
 
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/08/07/常用二维码生成格式/" title="常用二维码生成格式" itemprop="url">常用二维码生成格式</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YanLi" target="_blank" itemprop="author">YanLi</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-07T08:03:46.000Z" itemprop="datePublished"> 發表於 2015-08-07</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>随着智能设备的普及，二维码(2D barcode or QR code=Quick reference code)的使用越来越广泛，用智能手机拍下二维码就方便地获取网址、手机号码以及个人名片等有用的信息。本文将要介绍的是可被一般智能设备识别的二维码数据存储格式。</p>
-<p><strong>1. 网址 （URL）</strong><br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//http://mrlimr.github.io（无需http://）</span></span><br><span class="line">&#123;<span class="attribute">URLTO</span>:mrlimr.github.io&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2. 电子邮箱地址（E-mail Address）</strong><br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例如ly1992@qq.com语法格式</span></span><br><span class="line">&#123;<span class="attribute">mailto</span>:ly1992<span class="variable">@qq</span>.com&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>3. 电话号码 （telephone numbers）</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;tel:<span class="number">13955555555</span>｝</span><br><span class="line"><span class="comment">//如果是家用或办公固话则需要加上区号，需要和海外联系的朋友则需加上中国国家代码+86。</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>4. 联系人名片（Contact information）</strong><br>适合以二维码识别的联系人名片数据格式有多种，其中vcard（电子名片）是一种最常见的格式。相对于其他数据类型来说，联系人名片的格式要复杂的多。</p>
-<p><em>1&gt;. MECARD</em><br>当前大部分的二维码识别软件，一般都支持由日本的docomo公司制定的MECARD数据格式。MECARD是一种相对较为简单的格式，一个示例如下：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">MECARD</span>:<span class="attribute">N</span>:ren,xia;<span class="attribute">ADR</span>:beijing,beijing,china;<span class="attribute">TEL</span>:+<span class="number">865558888888</span>; <span class="attribute">EMAIL</span>:webmaster<span class="variable">@zhiwenweb</span>.com;<span class="attribute">URL</span>:<span class="attribute">http</span>:<span class="comment">//lzw.me;QQ:12345678;;</span></span><br></pre></td></tr></table></figure>
-<p><em>2&gt;. BIZCARD</em></p>
-<p>这种数据格式和MECARD类似，似乎比MECARD更加简单。一个可供参考的例子如下：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">BIZCARD</span>:<span class="attribute">N</span>:xia;<span class="attribute">X</span>:ren;<span class="attribute">T</span>:Software Engineer;<span class="attribute">C</span>:sina;<span class="attribute">A</span>:chaoyang, beijing, China <span class="number">100101</span>;<span class="attribute">B</span>:+<span class="number">8655555555</span>;<span class="attribute">E</span>:webmaster<span class="variable">@zhiwenweb</span>.cn;;</span><br></pre></td></tr></table></figure>
-<p><em>3&gt;. vCard</em></p>
-<p>一种很常用的电子名片数据格式。从windows的地址簿到linux的联系人；手机、PC皆能兼容，语法比较烦琐。</p>
-<p><strong>5. 短信（SMS）</strong><br>语法格式：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">smsto</span>:<span class="number">13800138000</span>:你好，欢迎来到我的博客&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>6. 彩信（MMS）</strong><br>和短信的格式类似：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">mmsto</span>:<span class="number">13800138000</span>:你好，欢迎来到我的博客&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>7. 地理位置（Geographic information）</strong><br>和朋友一起分享你现在的位置，无疑是个很有用的功能。例如查看google公司在美国纽约的位置：北纬40.71872，西经73.98905；高度为100米。语法格式：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">｛geo:<span class="number">40.71872</span>,-<span class="number">73.98905</span>,<span class="number">100</span>｝</span><br></pre></td></tr></table></figure>
-<p><strong>8. 获取安卓软件</strong><br>在google的安卓市场找软件，可以使用应用市场软件识别并进行软件搜索，例如微信的格式：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">｛<span class="string">market:</span><span class="comment">//details?id=com.tencent.mm｝</span></span><br></pre></td></tr></table></figure>
-<p><strong>9.获取Wifi配置（Android）</strong></p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">WIFI</span>:<span class="attribute">T</span>:WPA;<span class="attribute">S</span>:mynetwork;<span class="attribute">P</span>:mypass;;&#125;</span><br></pre></td></tr></table></figure>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/08/07/常用二维码生成格式/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/07/常用二维码生成格式/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand photo" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/08/06/My-Gallery/" title="新开始" itemprop="url">新开始</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YanLi" target="_blank" itemprop="author">YanLi</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-06T08:35:51.000Z" itemprop="datePublished"> 發表於 2015-08-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><strong>这是我用<a href="https://hexo.io/" target="_blank" rel="external">hexo</a>在<a href="https://github.com/" target="_blank" rel="external">GitHub</a>上面搭建的个人微博，以后会分享一些技术经验与心得。</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main ()&#123;</span><br><span class="line">	print('hello,world');</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">//一切伟大的行动和思想都有一个微不足道的开始</span><br></pre></td></tr></table></figure></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/08/06/My-Gallery/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/06/My-Gallery/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改属性和方法"><span class="toc-number">1.</span> <span class="toc-text">修改属性和方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用this值"><span class="toc-number">2.</span> <span class="toc-text">使用this值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构造函数"><span class="toc-number">3.</span> <span class="toc-text">构造函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#instanceof操作符"><span class="toc-number">4.</span> <span class="toc-text">instanceof操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传递对象"><span class="toc-number">5.</span> <span class="toc-text">传递对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象比较"><span class="toc-number">6.</span> <span class="toc-text">对象比较</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
@@ -572,12 +331,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -650,4 +486,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>

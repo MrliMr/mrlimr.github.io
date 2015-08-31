@@ -4,26 +4,38 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>常用二维码生成格式 | Mrli&#39;s blog</title>
+    <title>javascript学习笔记2 | Mrli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="YanLi">
     
 
     
-    <meta name="description" content="随着智能设备的普及，二维码(2D barcode or QR code=Quick reference code)的使用越来越广泛，用智能手机拍下二维码就方便地获取网址、手机号码以及个人名片等有用的信息。本文将要介绍的是可被一般智能设备识别的二维码数据存储格式。
-1. 网址 （URL）12//http://mrlimr.github.io（无需http://）&amp;#123;URLTO:mrlimr.">
+    <meta name="description" content="apply()和call()的区别
+apply()方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组
+
+####举个例子
+
+call()和apply()能够扩充函数赖以运行的作用域12345678910window.color = &quot;red&quot;;var o = &amp;#123; color: &quot;blue&quot; &amp;#125;;function sayColor()&amp;#123;    	alert">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用二维码生成格式">
-<meta property="og:url" content="http://yoursite.com/2015/08/07/常用二维码生成格式/index.html">
+<meta property="og:title" content="javascript学习笔记2">
+<meta property="og:url" content="http://yoursite.com/2015/08/31/javascript-学习笔记2/index.html">
 <meta property="og:site_name" content="Mrli's blog">
-<meta property="og:description" content="随着智能设备的普及，二维码(2D barcode or QR code=Quick reference code)的使用越来越广泛，用智能手机拍下二维码就方便地获取网址、手机号码以及个人名片等有用的信息。本文将要介绍的是可被一般智能设备识别的二维码数据存储格式。
-1. 网址 （URL）12//http://mrlimr.github.io（无需http://）&amp;#123;URLTO:mrlimr.">
-<meta property="og:updated_time" content="2015-08-07T08:17:06.000Z">
+<meta property="og:description" content="apply()和call()的区别
+apply()方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组
+
+####举个例子
+
+call()和apply()能够扩充函数赖以运行的作用域12345678910window.color = &quot;red&quot;;var o = &amp;#123; color: &quot;blue&quot; &amp;#125;;function sayColor()&amp;#123;    	alert">
+<meta property="og:updated_time" content="2015-08-31T14:51:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用二维码生成格式">
-<meta name="twitter:description" content="随着智能设备的普及，二维码(2D barcode or QR code=Quick reference code)的使用越来越广泛，用智能手机拍下二维码就方便地获取网址、手机号码以及个人名片等有用的信息。本文将要介绍的是可被一般智能设备识别的二维码数据存储格式。
-1. 网址 （URL）12//http://mrlimr.github.io（无需http://）&amp;#123;URLTO:mrlimr.">
+<meta name="twitter:title" content="javascript学习笔记2">
+<meta name="twitter:description" content="apply()和call()的区别
+apply()方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组
+
+####举个例子
+
+call()和apply()能够扩充函数赖以运行的作用域12345678910window.color = &quot;red&quot;;var o = &amp;#123; color: &quot;blue&quot; &amp;#125;;function sayColor()&amp;#123;    	alert">
 
     
     <link rel="alternative" href="/atom.xml" title="Mrli&#39;s blog" type="application/atom+xml">
@@ -81,14 +93,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/07/常用二维码生成格式/" title="常用二维码生成格式" itemprop="url">常用二维码生成格式</a>
+      <a href="/2015/08/31/javascript-学习笔记2/" title="javascript学习笔记2" itemprop="url">javascript学习笔记2</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="YanLi" target="_blank" itemprop="author">YanLi</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-07T08:03:46.000Z" itemprop="datePublished"> 發表於 2015-08-07</time>
+    <time datetime="2015-08-31T14:48:39.000Z" itemprop="datePublished"> 發表於 2015-08-31</time>
     
   </p>
 </header>
@@ -97,35 +109,27 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#apply()和call()的区别"><span class="toc-number">1.</span> <span class="toc-text">apply()和call()的区别</span></a></li></ol>
 		
 		</div>
 		
-		<p>随着智能设备的普及，二维码(2D barcode or QR code=Quick reference code)的使用越来越广泛，用智能手机拍下二维码就方便地获取网址、手机号码以及个人名片等有用的信息。本文将要介绍的是可被一般智能设备识别的二维码数据存储格式。</p>
-<p><strong>1. 网址 （URL）</strong><br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//http://mrlimr.github.io（无需http://）</span></span><br><span class="line">&#123;<span class="attribute">URLTO</span>:mrlimr.github.io&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2. 电子邮箱地址（E-mail Address）</strong><br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例如ly1992@qq.com语法格式</span></span><br><span class="line">&#123;<span class="attribute">mailto</span>:ly1992<span class="variable">@qq</span>.com&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>3. 电话号码 （telephone numbers）</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;tel:<span class="number">13955555555</span>｝</span><br><span class="line"><span class="comment">//如果是家用或办公固话则需要加上区号，需要和海外联系的朋友则需加上中国国家代码+86。</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>4. 联系人名片（Contact information）</strong><br>适合以二维码识别的联系人名片数据格式有多种，其中vcard（电子名片）是一种最常见的格式。相对于其他数据类型来说，联系人名片的格式要复杂的多。</p>
-<p><em>1&gt;. MECARD</em><br>当前大部分的二维码识别软件，一般都支持由日本的docomo公司制定的MECARD数据格式。MECARD是一种相对较为简单的格式，一个示例如下：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">MECARD</span>:<span class="attribute">N</span>:ren,xia;<span class="attribute">ADR</span>:beijing,beijing,china;<span class="attribute">TEL</span>:+<span class="number">865558888888</span>; <span class="attribute">EMAIL</span>:webmaster<span class="variable">@zhiwenweb</span>.com;<span class="attribute">URL</span>:<span class="attribute">http</span>:<span class="comment">//lzw.me;QQ:12345678;;</span></span><br></pre></td></tr></table></figure>
-<p><em>2&gt;. BIZCARD</em></p>
-<p>这种数据格式和MECARD类似，似乎比MECARD更加简单。一个可供参考的例子如下：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">BIZCARD</span>:<span class="attribute">N</span>:xia;<span class="attribute">X</span>:ren;<span class="attribute">T</span>:Software Engineer;<span class="attribute">C</span>:sina;<span class="attribute">A</span>:chaoyang, beijing, China <span class="number">100101</span>;<span class="attribute">B</span>:+<span class="number">8655555555</span>;<span class="attribute">E</span>:webmaster<span class="variable">@zhiwenweb</span>.cn;;</span><br></pre></td></tr></table></figure>
-<p><em>3&gt;. vCard</em></p>
-<p>一种很常用的电子名片数据格式。从windows的地址簿到linux的联系人；手机、PC皆能兼容，语法比较烦琐。</p>
-<p><strong>5. 短信（SMS）</strong><br>语法格式：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">smsto</span>:<span class="number">13800138000</span>:你好，欢迎来到我的博客&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>6. 彩信（MMS）</strong><br>和短信的格式类似：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">mmsto</span>:<span class="number">13800138000</span>:你好，欢迎来到我的博客&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>7. 地理位置（Geographic information）</strong><br>和朋友一起分享你现在的位置，无疑是个很有用的功能。例如查看google公司在美国纽约的位置：北纬40.71872，西经73.98905；高度为100米。语法格式：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">｛geo:<span class="number">40.71872</span>,-<span class="number">73.98905</span>,<span class="number">100</span>｝</span><br></pre></td></tr></table></figure>
-<p><strong>8. 获取安卓软件</strong><br>在google的安卓市场找软件，可以使用应用市场软件识别并进行软件搜索，例如微信的格式：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">｛<span class="string">market:</span><span class="comment">//details?id=com.tencent.mm｝</span></span><br></pre></td></tr></table></figure>
-<p><strong>9.获取Wifi配置（Android）</strong></p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">WIFI</span>:<span class="attribute">T</span>:WPA;<span class="attribute">S</span>:mynetwork;<span class="attribute">P</span>:mypass;;&#125;</span><br></pre></td></tr></table></figure>  
+		<h4 id="apply()和call()的区别">apply()和call()的区别</h4><blockquote>
+<p>apply()方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组</p>
+</blockquote>
+<p>####举个例子</p>
+<blockquote>
+<p>call()和apply()能够扩充函数赖以运行的作用域<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.color = <span class="string">"red"</span>;</span><br><span class="line"><span class="keyword">var</span> o = &#123; color: <span class="string">"blue"</span> &#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayColor</span>(<span class="params"></span>)</span>&#123;    </span><br><span class="line">	alert(<span class="keyword">this</span>.color);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//"red"</span></span><br><span class="line">sayColor();</span><br><span class="line">o.sayColor = sayColor;</span><br><span class="line"><span class="comment">//"blue"</span></span><br><span class="line">o.sayColor();</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">window.<span class="built_in">color</span> = <span class="string">"red"</span>;</span><br><span class="line">var o = &#123; <span class="built_in">color</span>: <span class="string">"blue"</span> &#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayColor</span><span class="params">()</span>&#123;</span>    </span><br><span class="line">	alert<span class="params">(this.color)</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//red</span></span><br><span class="line">sayColor<span class="params">()</span>;</span><br><span class="line"><span class="comment">//red </span></span><br><span class="line">sayColor.call<span class="params">(this)</span>;</span><br><span class="line"><span class="comment">//red </span></span><br><span class="line">sayColor.call<span class="params">(window)</span>;</span><br><span class="line"><span class="comment">//blue</span></span><br><span class="line">sayColor.call<span class="params">(o)</span>;</span><br></pre></td></tr></table></figure>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/javascript/">javascript</a>
+  </div>
 
 </div>
 
@@ -133,7 +137,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/08/07/常用二维码生成格式/" data-title="常用二维码生成格式 | Mrli&#39;s blog" data-tsina="2641199792" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/08/31/javascript-学习笔记2/" data-title="javascript学习笔记2 | Mrli&#39;s blog" data-tsina="2641199792" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -146,19 +150,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/08/18/kugou/" title="前端性能优化总结">
-  <strong>上一篇：</strong><br/>
-  <span>
-  前端性能优化总结</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/08/06/My-Gallery/"  title="新开始">
+<a href="/2015/08/24/javascript-学习笔记1/"  title="javascript 学习笔记1">
  <strong>下一篇：</strong><br/> 
- <span>新开始
+ <span>javascript 学习笔记1
 </span>
 </a>
 </div>
@@ -167,7 +163,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/08/07/常用二维码生成格式/" data-title="常用二维码生成格式" data-url="http://yoursite.com/2015/08/07/常用二维码生成格式/"></div>
+	<div class="ds-thread" data-thread-key="2015/08/31/javascript-学习笔记2/" data-title="javascript学习笔记2" data-url="http://yoursite.com/2015/08/31/javascript-学习笔记2/"></div>
 </section>
 
 
@@ -177,7 +173,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#apply()和call()的区别"><span class="toc-number">1.</span> <span class="toc-text">apply()和call()的区别</span></a></li></ol>
  
   </div>
 

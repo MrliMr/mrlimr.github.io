@@ -79,6 +79,83 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/09/01/javascript-学习笔记3/" title="javascript学习笔记3" itemprop="url">javascript学习笔记3</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="YanLi" target="_blank" itemprop="author">YanLi</a>
+		
+  <p class="article-time">
+    <time datetime="2015-09-01T14:20:41.000Z" itemprop="datePublished"> 發表於 2015-09-01</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h4 id="原型">原型</h4><blockquote>
+<p>JavaScript 不包含传统的类继承模型，而是使用 prototypal 原型模型。</p>
+</blockquote>
+<h4 id="使用原型之前的写法">使用原型之前的写法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x+y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">subtract</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x-y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(add(<span class="number">1</span>,<span class="number">3</span>));</span><br></pre></td></tr></table></figure>
+<h4 id="原型使用方式1">原型使用方式1</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> calc = <span class="function"><span class="keyword">function</span>(<span class="params">dec, tax</span>) </span>&#123;</span><br><span class="line">				<span class="keyword">this</span>.dec = dec;</span><br><span class="line">				<span class="keyword">this</span>.tax = tax;</span><br><span class="line">			&#125;</span><br><span class="line">			calc.prototype = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">				add = <span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">						<span class="keyword">return</span> x + y;</span><br><span class="line">					&#125;,</span><br><span class="line">				sub = <span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">return</span> x - y;</span><br><span class="line">				&#125;,</span><br><span class="line">				<span class="keyword">return</span> &#123;</span><br><span class="line">					add: add,</span><br><span class="line">					sub: sub</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> calc()).add(<span class="number">1</span>, <span class="number">2</span>));</span><br></pre></td></tr></table></figure>
+<h4 id="原型使用方式2">原型使用方式2</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> calc = <span class="function"><span class="keyword">function</span> (<span class="params">dec,tax</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.dec = dec;</span><br><span class="line">	<span class="keyword">this</span>.tax = tax;</span><br><span class="line">&#125;</span><br><span class="line">calc.prototype = &#123;</span><br><span class="line">	add:<span class="function"><span class="keyword">function</span> (<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x+y;</span><br><span class="line">	&#125;,</span><br><span class="line">	sub:<span class="function"><span class="keyword">function</span> (<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x-y;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> calc()).add(<span class="number">1</span>,<span class="number">2</span>));</span><br></pre></td></tr></table></figure>
+<h4 id="分步声明">分步声明</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> calc = <span class="function"><span class="keyword">function</span> (<span class="params">dec,tax</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.dec = dec;</span><br><span class="line">	<span class="keyword">this</span>.tax = tax;</span><br><span class="line">&#125;</span><br><span class="line">calc.prototype.add = <span class="function"><span class="keyword">function</span> (<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x+y;</span><br><span class="line">&#125;</span><br><span class="line">calc.prototype.sub = <span class="function"><span class="keyword">function</span> (<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x-y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> calc()).add(<span class="number">1</span>,<span class="number">1</span>));</span><br></pre></td></tr></table></figure>
+<h4 id="进阶使用">进阶使用</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> BaseCalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initNum = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">BaseCalc.prototype = &#123;</span><br><span class="line">	add:<span class="function"><span class="keyword">function</span> (<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x+y;</span><br><span class="line">	&#125;,</span><br><span class="line">	sub:<span class="function"><span class="keyword">function</span> (<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x-y;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> calc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initNum = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">calc.prototype = <span class="keyword">new</span> BaseCalc();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> calc()).add(<span class="number">1</span>,<span class="number">1</span>));</span><br><span class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> calc()).intNum);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>我们可以看到calc的原型是指向到BaseCalc的一个实例上，目的是让Calc集成它的add(x,y)和sub(x,y)这2个function，还有一点要说的是，由于它的原型是BaseCalc的一个实例，所以不管你创建多少个Calculator对象实例，他们的原型指向的都是同一个实例。</strong></p>
+<p><strong>上面的代码，运行以后，我们可以看到因为Calc的原型是指向BaseCalc的实例上的，所以可以访问他的intNum属性值，那如果我不想让Calc访问BaseCalc的构造函数里声明的属性值，那怎么办呢？这么办：</strong></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> calc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initNum = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line">calc.prototype = BaseCalc.prototype;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>通过将BaseCalc的原型赋给Calc的原型，这样你在Calc的实例上就访问不到那个initNum值了.</strong></p>
+</blockquote>
+<h4 id="重写原型">重写原型</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//覆盖前面的add方法</span></span><br><span class="line">calc.prototype.add = <span class="function"><span class="keyword">function</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x+y+<span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这样，我们计算得出的结果就比原来多出了一个tax的值，但是有一点需要注意：那就是重写的代码需要放在最后，这样才能覆盖前面的代码。</p>
+</blockquote>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/javascript/">javascript</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/09/01/javascript-学习笔记3/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/09/01/javascript-学习笔记3/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/08/31/javascript-学习笔记2/" title="javascript学习笔记2" itemprop="url">javascript学习笔记2</a>
   </h1>
   <p class="article-author">By
@@ -142,7 +219,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/24/javascript-学习笔记1/" title="javascript 学习笔记1" itemprop="url">javascript 学习笔记1</a>
+      <a href="/2015/08/24/javascript-学习笔记1/" title="javascript学习笔记1" itemprop="url">javascript学习笔记1</a>
   </h1>
   <p class="article-author">By
        
@@ -509,7 +586,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/javascript/" title="javascript">javascript<sup>2</sup></a></li>
+				<li><a href="/tags/javascript/" title="javascript">javascript<sup>3</sup></a></li>
 			
 		
 		</ul>

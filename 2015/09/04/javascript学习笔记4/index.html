@@ -4,23 +4,44 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>新开始 | Mrli&#39;s blog</title>
+    <title>javascript学习笔记4 | Mrli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="YanLi">
     
 
     
-    <meta name="description" content="这是我用hexo在GitHub上面搭建的个人微博，以后会分享一些技术经验与心得。123456#include &amp;lt;stdio.h&amp;gt;int main ()&amp;#123;	print(&apos;hello,world&apos;);	return 0;&amp;#125;//一切伟大的行动和思想都有一个微不足道的开始">
+    <meta name="description" content="module模式是javascript编程中非常通用的模式。module模式的基本特征：
+
+模块化，可重用
+封装了变量和function，与全局的namespace不接触，松耦合
+只暴露可用的public方法，其他私有的方法全部隐藏
+
+
+基本用法1234567891011var calc = function(eq) &amp;#123;	//这里可以声明私有成员	var eqCtl = document">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新开始">
-<meta property="og:url" content="http://yoursite.com/2015/08/06/My-Gallery/index.html">
+<meta property="og:title" content="javascript学习笔记4">
+<meta property="og:url" content="http://yoursite.com/2015/09/04/javascript学习笔记4/index.html">
 <meta property="og:site_name" content="Mrli's blog">
-<meta property="og:description" content="这是我用hexo在GitHub上面搭建的个人微博，以后会分享一些技术经验与心得。123456#include &amp;lt;stdio.h&amp;gt;int main ()&amp;#123;	print(&apos;hello,world&apos;);	return 0;&amp;#125;//一切伟大的行动和思想都有一个微不足道的开始">
-<meta property="og:updated_time" content="2015-08-07T00:57:30.000Z">
+<meta property="og:description" content="module模式是javascript编程中非常通用的模式。module模式的基本特征：
+
+模块化，可重用
+封装了变量和function，与全局的namespace不接触，松耦合
+只暴露可用的public方法，其他私有的方法全部隐藏
+
+
+基本用法1234567891011var calc = function(eq) &amp;#123;	//这里可以声明私有成员	var eqCtl = document">
+<meta property="og:updated_time" content="2015-09-03T17:07:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新开始">
-<meta name="twitter:description" content="这是我用hexo在GitHub上面搭建的个人微博，以后会分享一些技术经验与心得。123456#include &amp;lt;stdio.h&amp;gt;int main ()&amp;#123;	print(&apos;hello,world&apos;);	return 0;&amp;#125;//一切伟大的行动和思想都有一个微不足道的开始">
+<meta name="twitter:title" content="javascript学习笔记4">
+<meta name="twitter:description" content="module模式是javascript编程中非常通用的模式。module模式的基本特征：
+
+模块化，可重用
+封装了变量和function，与全局的namespace不接触，松耦合
+只暴露可用的public方法，其他私有的方法全部隐藏
+
+
+基本用法1234567891011var calc = function(eq) &amp;#123;	//这里可以声明私有成员	var eqCtl = document">
 
     
     <link rel="alternative" href="/atom.xml" title="Mrli&#39;s blog" type="application/atom+xml">
@@ -72,20 +93,20 @@
 
     </header>
     <div id="container">
-      <div id="main" class="photo" itemscope itemprop="blogPost">
+      <div id="main" class="post" itemscope itemprop="blogPost">
   
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/06/My-Gallery/" title="新开始" itemprop="url">新开始</a>
+      <a href="/2015/09/04/javascript学习笔记4/" title="javascript学习笔记4" itemprop="url">javascript学习笔记4</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="YanLi" target="_blank" itemprop="author">YanLi</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-06T08:35:51.000Z" itemprop="datePublished"> 發表於 2015-08-06</time>
+    <time datetime="2015-09-03T17:05:46.000Z" itemprop="datePublished"> 發表於 2015-09-04</time>
     
   </p>
 </header>
@@ -94,16 +115,43 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法"><span class="toc-number">1.</span> <span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匿名闭包"><span class="toc-number">2.</span> <span class="toc-text">匿名闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用全局变量"><span class="toc-number">3.</span> <span class="toc-text">引用全局变量</span></a></li></ol>
 		
 		</div>
 		
-		<p><strong>这是我用<a href="https://hexo.io/" target="_blank" rel="external">hexo</a>在<a href="https://github.com/" target="_blank" rel="external">GitHub</a>上面搭建的个人微博，以后会分享一些技术经验与心得。</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main ()&#123;</span><br><span class="line">	print('hello,world');</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">//一切伟大的行动和思想都有一个微不足道的开始</span><br></pre></td></tr></table></figure></p>
+		<blockquote>
+<p>module模式是javascript编程中非常通用的模式。<br>module模式的基本特征：</p>
+<ul>
+<li>模块化，可重用</li>
+<li>封装了变量和function，与全局的namespace不接触，松耦合</li>
+<li>只暴露可用的public方法，其他私有的方法全部隐藏</li>
+</ul>
+</blockquote>
+<h2 id="基本用法">基本用法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> calc = <span class="function"><span class="keyword">function</span>(<span class="params">eq</span>) </span>&#123;</span><br><span class="line">	<span class="comment">//这里可以声明私有成员</span></span><br><span class="line">	<span class="keyword">var</span> eqCtl = <span class="built_in">document</span>.getElementById(eq);</span><br><span class="line">	<span class="keyword">return</span>&#123;</span><br><span class="line">		<span class="comment">//暴露公开的成员</span></span><br><span class="line">		add: funciton(x,y)&#123;</span><br><span class="line">			<span class="keyword">var</span> val = x+y;</span><br><span class="line">			eqCtl.innerHTML ＝ val;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用方式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> calc = <span class="keyword">new</span> calc(<span class="string">'eq'</span>);</span><br><span class="line">calc.add(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>每次用的时候都要new一下，也就是说每个实例在内存里都copy了一份，如果不需要穿参数或者没有一些特殊的要求，可以在最后一个}后面加上一个括号来达到自执行的目的，这样该实例在内存中只会copy一份。</p>
+</blockquote>
+<h2 id="匿名闭包">匿名闭包</h2><blockquote>
+<p>匿名闭包是让一切成为可能的基础，也是javascript最好的特征，下面的例子中的函数内部的代码一直存在于闭包内，在整个运行周期内，该闭包都保证内部的代码处于私有状态。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="comment">//所有的变量和function都在这里声明，并且作用域也只能在这个匿名闭包里</span></span><br><span class="line">	<span class="comment">//但是这里的代码依然可以访问外部全局的对象</span></span><br><span class="line">))</span><br></pre></td></tr></table></figure></p>
+<p>匿名函数后面的括号，这是javascript语言所要求的，应为如果你不声明的话，javascript解释器默认是声明一个function函数，有括号，就是创建一个函数表达式，也就是自执行，用的时候不用和上面那样在new了，也可以这样声明：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;	<span class="comment">/*内部代码*/</span> &#125;)()</span><br></pre></td></tr></table></figure>
+<h2 id="引用全局变量">引用全局变量</h2><blockquote>
+<p>javascript有一个特性叫做<a href="http://blog.sina.com.cn/s/blog_7771b4b30101brfn.html" target="_blank" rel="external">隐式全局变量</a>，不管一个变量有没有用过，javascript解释器反向遍历作用域链来查找整个变量的var声明，如果没有找到var，解释器则假定该变量是全局变量，如果该变量用于赋值操作的话，之前如果不存在的话，解释器则会自动创建它，这就是说在匿名闭包里使用或创建全局变量非常容易不过比较困难的是，代码比较难管理，尤其是阅读代码的人看着很多区分哪些变量是全局，哪些变量是局部的。<br>不过，好在匿名函数里我们可以提供一个比较简单的替代方案，我们可以将全局变量当一个参数传入到匿名函数然后使用，相比隐式全局变量，它又清晰又快，举个栗子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$,yahoo</span>) </span>&#123;</span><br><span class="line">	<span class="comment">//带么可以使用全局的jquery对象了，yahoo也是一样</span></span><br><span class="line">&#125;)(jquery,yahoo)</span><br></pre></td></tr></table></figure></p>
+<p>有时候可能不仅仅要使用全局变量，而是也想声明全局变量，我们可以通过匿名函数的返回值来返回这个全局变量，这就是一个基本的module模式，举个栗子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> blogModule = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> my = &#123;&#125;,privateName ＝ <span class="string">'博客'</span>;</span><br><span class="line">	funciton privateAddTopic(data)&#123;</span><br><span class="line">		<span class="comment">//这里是内部处理代码</span></span><br><span class="line">	&#125;</span><br><span class="line">	my.name = privateName;</span><br><span class="line">	my.addTopic = <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">		privateAddTopic(data);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> my;</span><br><span class="line">))</span><br></pre></td></tr></table></figure></p>
+<p>上面的例子声明了一个全局变量blogModule，并且带有两个可访问的属性：blogModule.addTopic和blogModule.name，除此之外，其他代码都在匿名函数的闭包里保持私有状态。同时根据上面传入的全局变量的例子，我们也可以很方便的传入其他的全局变量。</p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/javascript/">javascript</a>
+  </div>
 
 </div>
 
@@ -111,7 +159,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/08/06/My-Gallery/" data-title="新开始 | Mrli&#39;s blog" data-tsina="2641199792" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/09/04/javascript学习笔记4/" data-title="javascript学习笔记4 | Mrli&#39;s blog" data-tsina="2641199792" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -124,20 +172,20 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/08/07/常用二维码生成格式/" title="常用二维码生成格式">
-  <strong>上一篇：</strong><br/>
-  <span>
-  常用二维码生成格式</span>
+
+<div class="next">
+<a href="/2015/09/01/javascript-学习笔记3/"  title="javascript学习笔记3">
+ <strong>下一篇：</strong><br/> 
+ <span>javascript学习笔记3
+</span>
 </a>
 </div>
-
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/08/06/My-Gallery/" data-title="新开始" data-url="http://yoursite.com/2015/08/06/My-Gallery/"></div>
+	<div class="ds-thread" data-thread-key="2015/09/04/javascript学习笔记4/" data-title="javascript学习笔记4" data-url="http://yoursite.com/2015/09/04/javascript学习笔记4/"></div>
 </section>
 
 
@@ -147,7 +195,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法"><span class="toc-number">1.</span> <span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匿名闭包"><span class="toc-number">2.</span> <span class="toc-text">匿名闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用全局变量"><span class="toc-number">3.</span> <span class="toc-text">引用全局变量</span></a></li></ol>
  
   </div>
 

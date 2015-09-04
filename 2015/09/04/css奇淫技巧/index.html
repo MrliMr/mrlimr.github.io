@@ -4,35 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>javascript学习笔记2 | Mrli&#39;s blog</title>
+    <title>css奇淫技巧 | Mrli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="YanLi">
     
 
     
-    <meta name="description" content="call()和apply()的区别。
-apply()方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组
-
-举个例子
-call()和apply()能够扩充函数赖以运行的作用域12345678910window.color = &quot;red&quot;;var o = &amp;#123; color: &quot;blue&quot; &amp;#125;;function sayColor()&amp;#123;    	alert(thi">
+    <meta name="description" content="多行文本溢出显示省略号(…)的方法1234567p &amp;#123;    overflow : hidden;    text-overflow: ellipsis;    display: -webkit-box;    -webkit-line-clamp: 2;//规定可现实几行    -webkit-box-orient: vertical;&amp;#125;
+coming soon….">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript学习笔记2">
-<meta property="og:url" content="http://yoursite.com/2015/08/31/javascript-学习笔记2/index.html">
+<meta property="og:title" content="css奇淫技巧">
+<meta property="og:url" content="http://yoursite.com/2015/09/04/css奇淫技巧/index.html">
 <meta property="og:site_name" content="Mrli's blog">
-<meta property="og:description" content="call()和apply()的区别。
-apply()方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组
-
-举个例子
-call()和apply()能够扩充函数赖以运行的作用域12345678910window.color = &quot;red&quot;;var o = &amp;#123; color: &quot;blue&quot; &amp;#125;;function sayColor()&amp;#123;    	alert(thi">
-<meta property="og:updated_time" content="2015-09-01T14:44:53.000Z">
+<meta property="og:description" content="多行文本溢出显示省略号(…)的方法1234567p &amp;#123;    overflow : hidden;    text-overflow: ellipsis;    display: -webkit-box;    -webkit-line-clamp: 2;//规定可现实几行    -webkit-box-orient: vertical;&amp;#125;
+coming soon….">
+<meta property="og:updated_time" content="2015-09-04T10:49:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript学习笔记2">
-<meta name="twitter:description" content="call()和apply()的区别。
-apply()方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组
-
-举个例子
-call()和apply()能够扩充函数赖以运行的作用域12345678910window.color = &quot;red&quot;;var o = &amp;#123; color: &quot;blue&quot; &amp;#125;;function sayColor()&amp;#123;    	alert(thi">
+<meta name="twitter:title" content="css奇淫技巧">
+<meta name="twitter:description" content="多行文本溢出显示省略号(…)的方法1234567p &amp;#123;    overflow : hidden;    text-overflow: ellipsis;    display: -webkit-box;    -webkit-line-clamp: 2;//规定可现实几行    -webkit-box-orient: vertical;&amp;#125;
+coming soon….">
 
     
     <link rel="alternative" href="/atom.xml" title="Mrli&#39;s blog" type="application/atom+xml">
@@ -90,14 +81,14 @@ call()和apply()能够扩充函数赖以运行的作用域12345678910window.colo
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/31/javascript-学习笔记2/" title="javascript学习笔记2" itemprop="url">javascript学习笔记2</a>
+      <a href="/2015/09/04/css奇淫技巧/" title="css奇淫技巧" itemprop="url">css奇淫技巧</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="YanLi" target="_blank" itemprop="author">YanLi</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-31T14:48:39.000Z" itemprop="datePublished"> 發表於 2015-08-31</time>
+    <time datetime="2015-09-04T10:47:37.000Z" itemprop="datePublished"> 發表於 2015-09-04</time>
     
   </p>
 </header>
@@ -106,17 +97,13 @@ call()和apply()能够扩充函数赖以运行的作用域12345678910window.colo
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#call()和apply()的区别。"><span class="toc-number">1.</span> <span class="toc-text">call()和apply()的区别。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#举个例子"><span class="toc-number">2.</span> <span class="toc-text">举个例子</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#多行文本溢出显示省略号(…)的方法"><span class="toc-number">1.</span> <span class="toc-text">多行文本溢出显示省略号(…)的方法</span></a></li></ol>
 		
 		</div>
 		
-		<h4 id="call()和apply()的区别。">call()和apply()的区别。</h4><blockquote>
-<p>apply()方法接收两个参数：一个是在其中运行函数的作用域，另一个是参数数组</p>
-</blockquote>
-<h4 id="举个例子">举个例子</h4><blockquote>
-<p>call()和apply()能够扩充函数赖以运行的作用域<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.color = <span class="string">"red"</span>;</span><br><span class="line"><span class="keyword">var</span> o = &#123; color: <span class="string">"blue"</span> &#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayColor</span>(<span class="params"></span>)</span>&#123;    </span><br><span class="line">	alert(<span class="keyword">this</span>.color);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//"red"</span></span><br><span class="line">sayColor();</span><br><span class="line">o.sayColor = sayColor;</span><br><span class="line"><span class="comment">//"blue"</span></span><br><span class="line">o.sayColor();</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">window.<span class="built_in">color</span> = <span class="string">"red"</span>;</span><br><span class="line">var o = &#123; <span class="built_in">color</span>: <span class="string">"blue"</span> &#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayColor</span><span class="params">()</span>&#123;</span>    </span><br><span class="line">	alert<span class="params">(this.color)</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//red</span></span><br><span class="line">sayColor<span class="params">()</span>;</span><br><span class="line"><span class="comment">//red </span></span><br><span class="line">sayColor.call<span class="params">(this)</span>;</span><br><span class="line"><span class="comment">//red </span></span><br><span class="line">sayColor.call<span class="params">(window)</span>;</span><br><span class="line"><span class="comment">//blue</span></span><br><span class="line">sayColor.call<span class="params">(o)</span>;</span><br></pre></td></tr></table></figure>  
+		<h4 id="多行文本溢出显示省略号(…)的方法">多行文本溢出显示省略号(…)的方法</h4><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">overflow </span>: hidden;</span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>;<span class="comment">//规定可现实几行</span></span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>coming soon….</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -124,7 +111,7 @@ call()和apply()能够扩充函数赖以运行的作用域12345678910window.colo
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/javascript/">javascript</a>
+  <span></span> <a href="/tags/CSS/">CSS</a>
   </div>
 
 </div>
@@ -166,19 +153,11 @@ call()和apply()能够扩充函数赖以运行的作用域12345678910window.colo
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/09/01/javascript-学习笔记3/" title="javascript学习笔记3">
-  <strong>上一篇：</strong><br/>
-  <span>
-  javascript学习笔记3</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/08/24/javascript-学习笔记1/"  title="javascript学习笔记1">
+<a href="/2015/09/04/移动web资源整理/"  title="移动web资源整理">
  <strong>下一篇：</strong><br/> 
- <span>javascript学习笔记1
+ <span>移动web资源整理
 </span>
 </a>
 </div>
@@ -187,7 +166,7 @@ call()和apply()能够扩充函数赖以运行的作用域12345678910window.colo
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/08/31/javascript-学习笔记2/" data-title="javascript学习笔记2" data-url="http://yoursite.com/2015/08/31/javascript-学习笔记2/"></div>
+	<div class="ds-thread" data-thread-key="2015/09/04/css奇淫技巧/" data-title="css奇淫技巧" data-url="http://yoursite.com/2015/09/04/css奇淫技巧/"></div>
 </section>
 
 
@@ -197,7 +176,7 @@ call()和apply()能够扩充函数赖以运行的作用域12345678910window.colo
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#call()和apply()的区别。"><span class="toc-number">1.</span> <span class="toc-text">call()和apply()的区别。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#举个例子"><span class="toc-number">2.</span> <span class="toc-text">举个例子</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#多行文本溢出显示省略号(…)的方法"><span class="toc-number">1.</span> <span class="toc-text">多行文本溢出显示省略号(…)的方法</span></a></li></ol>
  
   </div>
 
